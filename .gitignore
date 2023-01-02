@@ -1,0 +1,14 @@
+# Ignore everything
+*
+
+# But not these files...
+!.gitignore
+!penguins-eggs.install
+!PKGBUILD
+!README.md
+!pubblicazione.md
+!changelog.md
+!build
+!clean
+!.SRCINFO
+# etc...
