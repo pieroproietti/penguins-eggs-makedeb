@@ -1,1 +1,1 @@
-makepkg -srcCi
+makedeb 

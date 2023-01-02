@@ -28,7 +28,7 @@ options=('!strip')
 makedepends=('npm')
 depends=('coreutils' 'cryptsetup' 'curl' 'dosfstools' 'dpkg-dev' 'git'
          'isolinux' 'live-boot' 'live-boot-initramfs-tools' 'lvm2' 
-         'parted' 'pxelinux' 'rsync' 'squashfs-tools' 'sshfs'
+         'nodejs' 'parted' 'pxelinux' 'rsync' 'squashfs-tools' 'sshfs'
          'syslinux' 'syslinux-common' 'xorriso')
 optdepends=('bash-completion: enable eggs commands automatic completion'
             'calamares: system installer GUI')
