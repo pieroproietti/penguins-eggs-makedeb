@@ -1,19 +1,14 @@
-# penguins-eggs-arch
+# penguins-eggs-makedeb
 
-## Build and install penguins-eggs on Arch
+A PKGBUILD for Debian
 
-### stable
-Copy and paste follow instructions 
-```
-git clone https://aur.archlinux.org/penguins-eggs.git
-cd penguins-eggs
-makepkg -srcCi
-```
+## Build and install penguins-eggs on Debian
+
 ### developer
 Copy and paste follow instructions 
 ```
-git clone https://github.com/pieroproietti/penguins-eggs-arch
-cd penguins-eggs-arch
+git clone https://github.com/pieroproietti/penguins-eggs-makedeb
+cd penguins-eggs-makedeb
 makepkg -srcCi
 ```
 
@@ -24,8 +19,6 @@ makepkg -srcCi
 
 ## add calamares installer (optional)
 ```sudo eggs calamares --install```
-
-(*) Note: this option don't work at the moment on Arch, you can build it following [penguins-calamares-arch](https://github.com/pieroproietti/penguins-calamares-arch)
 
 ## Create your first iso (default)
 All the users will be removed from your live system.
