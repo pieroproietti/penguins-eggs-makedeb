@@ -36,11 +36,13 @@ optdepends=('bash-completion: enable eggs commands automatic completion'
 build() {
   cd "${pkgname}-${pkgver}"
   # Install pnpm into "pnpm-dir"
-  npm set prefix "pnpm-dir"
-  npm install -g pnpm
+  #npm set prefix "pnpm-dir"
+  #npm install -g pnpm
   # Build lib
-  pnpm-dir/bin/pnpm install
-  pnpm-dir/bin/pnpm build
+  #pnpm-dir/bin/pnpm install
+  #pnpm-dir/bin/pnpm build
+  pnpm install
+  pnpm build
 }
 
 package() {
@@ -51,12 +53,10 @@ package() {
   # Fix paths for node modules
   find node_modules -type f -print0 | xargs --null sed -i "s#${srcdir}/${pkgname}-${pkgver}/#/usr/lib/eggs/#"
 
-  # We need them on /usr/lib/ not in /opt
-  # I don't see problems. To change in /opt it's 
-  # will be possible too, but need changes of sources
   install -m 755 -d "${pkgdir}/usr/lib/${pkgname}"
   cp -r -t "${pkgdir}/usr/lib/${pkgname}/" addons assets bin conf dist ipxe node_modules mkinitcpio pnpm-lock.yaml scripts
   install -m 644 -D package.json -t "${pkgdir}/usr/lib/${pkgname}/"
+
   # Install documentation
   install -m 755 -d "${pkgdir}/usr/share/doc/${pkgname}/"
   install -m 644 -D README.md "${pkgdir}/usr/share/doc/${pkgname}/"
